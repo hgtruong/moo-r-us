@@ -20,7 +20,7 @@ app.get('/api/cows', (req,res) => {
 
 
 app.post('/api/cows', (req, res) => {
-  // console.log('inside post request');
+  console.log('Post request initialized');
   controllers.cows.post(req, res);
 });
 

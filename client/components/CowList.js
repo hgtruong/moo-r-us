@@ -6,11 +6,10 @@ class CowList extends React.Component {
   }
 
   render() {
-    console.log('here is', this.props.cows);
     return (
-      <div>
+      <div> Cows in database:
         {
-          // TODO: Handle when you user click cow's name
+          // TODO: call cowDetails when cow name clicked
           this.props.cows.map(function(cow) {
             return <div key={cow.id}>{cow.name}</div>
           })
