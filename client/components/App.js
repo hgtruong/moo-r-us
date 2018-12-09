@@ -49,6 +49,12 @@ class App extends React.Component {
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify(dataObj)
     })
+    .then( (results) => {
+      console.log(results);
+      if (results.status >= 200 || results.status <= 299){
+        this.getFetch();
+      }
+    })
   }
 
   componentDidMount() {
