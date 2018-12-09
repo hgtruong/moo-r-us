@@ -12,7 +12,6 @@ module.exports = {
 
     post: function(req, res) {
       var params = [req.body.name, req.body.description];
-      console.log('params', params);
       models.cows.post(params, function(err, results) {
         if (err) { throw err; }
         res.sendStatus(201);

@@ -9,7 +9,9 @@ module.exports = {
 
     post: (params, callback) => {
       var queryString = 'insert into cows(name, description) values ( ? , ?);';
-      // db.query();
+      db.query(queryString, params, function(err, results){
+        callback(err, results);
+      });
     }
   }
 }
