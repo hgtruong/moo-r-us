@@ -4,7 +4,9 @@ module.exports = {
   cows: {
     get: (callback) => {
       var queryString = 'select * from cows;'
-      // db.query();
+      db.query(queryString, function(err, results){
+        callback(err, results);
+      });
     },
 
     post: (params, callback) => {

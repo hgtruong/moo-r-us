@@ -7,13 +7,13 @@ var app = express();
 app.use(parser.json());
 
 app.get('/api/cows', (req,res) => {
-  console.log('inside get request');
+  // console.log('inside get request');
   controllers.cows.get(req, res);
 });
 
 
 app.post('/api/cows', (req, res) => {
-  console.log('inside post request');
+  // console.log('inside post request');
   controllers.cows.post(req, res);
 });
 

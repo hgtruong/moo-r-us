@@ -3,7 +3,7 @@ var models = require('../models/index.js');
 module.exports = {
   cows: {
     get: function(req, res) {
-      console.log('inside controller get');
+      // console.log('inside controller get');
       models.cows.get(function(err, results){
         if (err) { throw err; }
         res.json(results);
