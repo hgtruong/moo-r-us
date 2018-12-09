@@ -6,6 +6,7 @@ module.exports = {
       // console.log('inside controller get');
       models.cows.get(function(err, results){
         if (err) { throw err; }
+        console.log('results in controller', results);
         res.json(results);
       });
     },

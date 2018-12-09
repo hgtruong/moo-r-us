@@ -3,6 +3,13 @@ var controllers = require('../controllers');
 var parser = require('body-parser');
 var app = express();
 
+//Enable CORS
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 // Middleware to parse the body
 app.use(parser.json());
 
