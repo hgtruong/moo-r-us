@@ -23,9 +23,7 @@ class App extends React.Component {
       name: this.state.cowName,
       description: this.state.cowDescription
     }
-
     this.postFetch(cowObj);
-
     event.preventDefault();
   }
 
